@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>GTA IV CLIP LUCRO — Crie Clipes e Conteúdo de Gameplay</title>
+<title>GTA VI CLIP LUCRO — Crie Clipes e Conteúdo de Gameplay</title>
 <meta name="description" content="Um guia prático com ideias, prompts, roteiros e planejamento para transformar gameplay em conteúdo pronto para publicar.">
 <meta name="theme-color" content="#0b0a09">
 <meta property="og:type" content="website">
-<meta property="og:title" content="GTA IV CLIP LUCRO — Crie Clipes e Conteúdo de Gameplay">
+<meta property="og:title" content="GTA VI CLIP LUCRO — Crie Clipes e Conteúdo de Gameplay">
 <meta property="og:description" content="Um guia prático com ideias, prompts, roteiros e planejamento para transformar gameplay em conteúdo pronto para publicar.">
 <meta property="og:image" content="assets/og.jpg">
 <link rel="preload" as="image" href="assets/hero-sm.webp" media="(max-width: 759px)" fetchpriority="high">
@@ -97,6 +97,40 @@ a{color:inherit}
 .mini-price s{text-decoration-color:var(--red);text-decoration-thickness:2px}
 .mini-price strong{font-family:var(--display);font-weight:400;font-size:2.1rem;color:var(--ink);line-height:1}
 
+/* ---------- escolha de pagamento (cartão / pix) ---------- */
+.pay{container-type:inline-size;width:100%}
+.pay-grid{display:grid;gap:16px}
+.pay-opt{--pc:#ff3b43;--pc-glow:rgba(224,27,35,.5);position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0;padding:20px 16px 18px;border-radius:18px;text-align:center;
+  background:radial-gradient(120% 80% at 50% 0%,color-mix(in srgb,var(--pc) 10%,transparent),transparent 70%),linear-gradient(180deg,rgba(27,24,21,.92),rgba(11,10,9,.94));
+  border:1px solid color-mix(in srgb,var(--pc) 38%,transparent);box-shadow:0 0 0 1px rgba(255,255,255,.03) inset,0 18px 40px -22px var(--pc-glow)}
+.pay-opt.is-pix{--pc:#3fe05a;--pc-glow:rgba(56,201,74,.45)}
+.pay-label{display:flex;align-items:center;justify-content:center;gap:10px;margin:0;font-weight:800;font-style:italic;font-size:1.05rem;letter-spacing:.03em;text-transform:uppercase;color:#fff}
+.pay-label svg{width:28px;height:28px;flex:none;color:var(--pc);filter:drop-shadow(0 0 6px var(--pc-glow))}
+.pay-sub{margin:4px 0 0;font-weight:700;font-style:italic;font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase;color:#cfc7ba}
+.pay-sub b{color:var(--pc);font-size:1.35em}
+.pay-price{margin:2px 0 14px;font-family:var(--display);font-size:clamp(2.8rem,15cqi,3.7rem);line-height:1;color:#fff;white-space:nowrap;transform:skewX(-6deg);text-shadow:0 4px 18px rgba(0,0,0,.6)}
+.pay-btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:62px;margin-top:auto;padding:14px 16px;border-radius:16px;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.25)),#0e0c0b;border:2px solid var(--pc);color:#fff;
+  font-weight:800;font-style:italic;font-size:1.06rem;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;white-space:nowrap;
+  box-shadow:0 0 18px -4px var(--pc-glow),0 0 0 1px rgba(255,255,255,.06) inset,0 0 22px -10px var(--pc) inset;
+  overflow:hidden;transition:transform .2s ease,box-shadow .2s ease;-webkit-tap-highlight-color:transparent}
+.pay-btn svg{width:24px;height:24px;flex:none;color:var(--pc)}
+.pay-btn .arrow{width:20px;height:20px;color:#fff;transition:transform .2s ease}
+.pay-btn::before{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.14),transparent);transform:skewX(-20deg);animation:shine 5s ease-in-out 2s infinite}
+.is-pix .pay-btn::before{animation-delay:2.6s}
+.pay-btn:hover{transform:translateY(-2px);box-shadow:0 0 28px -2px var(--pc-glow),0 0 0 1px rgba(255,255,255,.08) inset,0 0 26px -8px var(--pc) inset}
+.pay-btn:hover .arrow{transform:translateX(4px)}
+.pay-btn:active{transform:translateY(0)}
+.pay-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@container (min-width:500px){
+  .pay-grid{grid-template-columns:1fr 1fr}
+  .pay-price{font-size:clamp(2.6rem,7.6cqi,3.6rem)}
+  .pay-btn{font-size:clamp(.9rem,2.7cqi,1.04rem);gap:8px;padding:14px 10px;letter-spacing:.01em}
+  .pay-btn svg{width:20px;height:20px}
+}
+.price-box .pay,.final .pay{max-width:640px;margin:0 auto}
+.final .pay{margin-top:30px}
+
 /* ---------- BENEFÍCIOS ---------- */
 .benefits{background:var(--bg)}
 .benefits ul{display:grid;grid-template-columns:1fr 1fr;margin:0;padding:8px 0 40px;list-style:none;border-top:1px solid var(--line)}
@@ -184,7 +218,7 @@ footer p{margin:4px 0}
   .lead{font-size:1.25rem;max-width:32ch}
   .hero-product{margin:0;width:min(112%,620px);justify-self:end;align-self:end}
   .hero-product:hover .product-img,.offer-product:hover .product-img{transform:scale(1.025)}
-  .hero-buy{max-width:440px;align-self:start}
+  .hero-buy{align-self:start}
   .mini-price{justify-content:flex-start}
   .hero-buy .trust{justify-content:flex-start}
   .benefits ul{grid-template-columns:repeat(4,1fr);padding:0 0 48px}
@@ -204,7 +238,7 @@ footer p{margin:4px 0}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .cta::before{animation:none;display:none}
+  .cta::before,.pay-btn::before{animation:none;display:none}
   .js .reveal{opacity:1;transform:none;transition:none}
 }
 </style>
@@ -215,6 +249,8 @@ footer p{margin:4px 0}
   <defs>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-cart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.2l2.3 10.5a1.5 1.5 0 0 0 1.5 1.2h8.4a1.5 1.5 0 0 0 1.5-1.1L21 8H6.3"/><circle cx="9.5" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></g></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.2"/><path d="M2.5 9.5h19M6 15h4M14.5 15h3"/></g></symbol>
+    <symbol id="i-pix" viewBox="0 0 24 24"><g fill="currentColor"><path d="M12 1.6 16.4 6 12 10.4 7.6 6z"/><path d="M12 13.6 16.4 18 12 22.4 7.6 18z"/><path d="M6 7.6 10.4 12 6 16.4 1.6 12z"/><path d="M18 7.6 22.4 12 18 16.4 13.6 12z"/></g></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></g></symbol>
     <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -236,18 +272,34 @@ footer p{margin:4px 0}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="kicker"><svg aria-hidden="true"><use href="#i-doc"/></svg>Guia prático em&nbsp;<b>PDF</b></p>
-      <h1 class="display title"><span class="slant l1">GTA <em>IV</em></span><span class="slant l2">Clip Lucro</span></h1>
+      <h1 class="display title"><span class="slant l1">GTA <em>VI</em></span><span class="slant l2">Clip Lucro</span></h1>
       <svg class="brush" aria-hidden="true"><use href="#brush"/></svg>
       <p class="lead">O método completo para criar clipes de gameplay, com ideias, prompts, roteiros e <mark>um plano prático para produzir conteúdo.</mark></p>
     </div>
     <div class="hero-product">
-      <img class="product-img" src="assets/produto-kit.webp" alt="GTA IV Clip Lucro: caixa do produto, notebook e celular com o material" width="745" height="445" fetchpriority="high" decoding="async">
+      <img class="product-img" src="assets/produto-kit.webp" alt="GTA VI Clip Lucro: caixa do produto, notebook e celular com o material" width="745" height="445" fetchpriority="high" decoding="async">
     </div>
     <div class="hero-buy">
-      <p class="mini-price"><span>De <s>R$ 69,90</s></span><span>por</span><strong>R$ 27,50</strong></p>
-      <a class="cta" href="#oferta" data-checkout>
-        <svg aria-hidden="true"><use href="#i-cart"/></svg>Quero meu acesso agora<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
-      </a>
+      <div class="pay">
+        <div class="pay-grid">
+          <div class="pay-opt is-card">
+            <p class="pay-label"><svg aria-hidden="true"><use href="#i-card"/></svg>Cartão de crédito</p>
+            <p class="pay-sub">Em até <b>12x</b> de</p>
+            <p class="pay-price">R$ 69,90</p>
+            <a class="pay-btn" href="https://link.infinitepay.io/gtaiv/VC1D-BzwK1Ps7Lt-69,90" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-card"/></svg>Pagar com cartão<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <div class="pay-opt is-pix">
+            <p class="pay-label"><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix</p>
+            <p class="pay-sub">Apenas</p>
+            <p class="pay-price">R$ 27,50</p>
+            <a class="pay-btn" href="https://app.pushinpay.com.br/service/pay/a342d955-54d2-4204-82da-312f8728aae2" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-pix"/></svg>Pagar com Pix<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
       <ul class="trust">
         <li><svg aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato</li>
         <li><svg aria-hidden="true"><use href="#i-lock"/></svg>Pagamento seguro</li>
@@ -274,17 +326,30 @@ footer p{margin:4px 0}
 <section class="offer grain" id="oferta" aria-labelledby="oferta-t">
   <div class="wrap offer-grid">
     <div class="offer-product reveal">
-      <img class="product-img" src="assets/produto-box.webp" alt="Caixa do produto GTA IV Clip Lucro" width="345" height="445" loading="lazy" decoding="async">
+      <img class="product-img" src="assets/produto-box.webp" alt="Caixa do produto GTA VI Clip Lucro" width="345" height="445" loading="lazy" decoding="async">
     </div>
     <div class="price-box reveal">
       <h2 id="oferta-t" class="sr">Oferta</h2>
-      <p class="price-old">De <s>R$ 69,90</s></p>
-      <p class="price-tag">por apenas</p>
-      <p class="price" aria-label="R$ 27,50"><span class="cur">R$</span><span class="int">27</span><span class="dec">,50</span></p>
-      <svg class="brush" aria-hidden="true"><use href="#brush"/></svg>
-      <a class="cta" href="#oferta" data-checkout>
-        <svg aria-hidden="true"><use href="#i-cart"/></svg>Quero meu acesso agora<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
-      </a>
+      <div class="pay">
+        <div class="pay-grid">
+          <div class="pay-opt is-card">
+            <p class="pay-label"><svg aria-hidden="true"><use href="#i-card"/></svg>Cartão de crédito</p>
+            <p class="pay-sub">Em até <b>12x</b> de</p>
+            <p class="pay-price">R$ 69,90</p>
+            <a class="pay-btn" href="https://link.infinitepay.io/gtaiv/VC1D-BzwK1Ps7Lt-69,90" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-card"/></svg>Pagar com cartão<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <div class="pay-opt is-pix">
+            <p class="pay-label"><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix</p>
+            <p class="pay-sub">Apenas</p>
+            <p class="pay-price">R$ 27,50</p>
+            <a class="pay-btn" href="https://app.pushinpay.com.br/service/pay/a342d955-54d2-4204-82da-312f8728aae2" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-pix"/></svg>Pagar com Pix<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
       <ul class="trust">
         <li><svg aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato</li>
         <li><svg aria-hidden="true"><use href="#i-lock"/></svg>Pagamento seguro</li>
@@ -342,11 +407,26 @@ footer p{margin:4px 0}
   <div class="wrap reveal">
     <h2 id="final-t" class="display"><span class="slant">Pare de começar</span><br><span class="slant"><em>do zero.</em></span></h2>
     <p class="lead">Tenha uma estrutura pronta para transformar ideias de gameplay em conteúdo.</p>
-    <p class="price-old">De <s>R$ 69,90</s></p>
-    <p class="price" aria-label="R$ 27,50"><span class="cur">R$</span><span class="int">27</span><span class="dec">,50</span></p>
-    <a class="cta" href="#oferta" data-checkout>
-      <svg aria-hidden="true"><use href="#i-cart"/></svg>Quero meu acesso agora<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
-    </a>
+    <div class="pay">
+      <div class="pay-grid">
+        <div class="pay-opt is-card">
+          <p class="pay-label"><svg aria-hidden="true"><use href="#i-card"/></svg>Cartão de crédito</p>
+          <p class="pay-sub">Em até <b>12x</b> de</p>
+          <p class="pay-price">R$ 69,90</p>
+          <a class="pay-btn" href="https://link.infinitepay.io/gtaiv/VC1D-BzwK1Ps7Lt-69,90" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-card"/></svg>Pagar com cartão<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+        <div class="pay-opt is-pix">
+          <p class="pay-label"><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix</p>
+          <p class="pay-sub">Apenas</p>
+          <p class="pay-price">R$ 27,50</p>
+          <a class="pay-btn" href="https://app.pushinpay.com.br/service/pay/a342d955-54d2-4204-82da-312f8728aae2" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-pix"/></svg>Pagar com Pix<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
     <ul class="trust">
       <li><svg aria-hidden="true"><use href="#i-bolt"/></svg>Acesso imediato</li>
       <li aria-hidden="true">•</li>
@@ -358,7 +438,7 @@ footer p{margin:4px 0}
 
 <footer>
   <div class="wrap">
-    <p>GTA IV Clip Lucro — guia digital em PDF.</p>
+    <p>GTA VI Clip Lucro — guia digital em PDF.</p>
     <p>Produto independente, sem vínculo com a Rockstar Games ou a Take-Two Interactive. As marcas citadas pertencem aos seus respectivos donos.</p>
   </div>
 </footer>

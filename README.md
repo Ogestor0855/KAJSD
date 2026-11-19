@@ -1,4 +1,4 @@
-# GTA IV CLIP LUCRO — página de vendas + checkout PIX
+# GTA VI CLIP LUCRO — página de vendas + checkout PIX
 
 Cloudflare Pages: arquivos estáticos em `dist/` + backend em `functions/[[path]].js` (Pages Functions).
 Pedidos, sessões do admin e rate limit ficam no **D1** (binding `DB`); o PDF do produto no **R2** (binding `PRODUCT_FILES`).

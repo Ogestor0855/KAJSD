@@ -1,4 +1,4 @@
-// Backend da página de vendas + checkout PIX do GTA IV CLIP LUCRO (Cloudflare Pages Functions).
+// Backend da página de vendas + checkout PIX do GTA VI CLIP LUCRO (Cloudflare Pages Functions).
 // Mesmas rotas e regras do antigo server.js; pedidos, sessões e rate limit ficam no D1 (binding DB)
 // e o PDF do produto no R2 (binding PRODUCT_FILES). Os arquivos estáticos vêm de dist/ (binding ASSETS).
 import crypto from 'node:crypto';
@@ -7,7 +7,7 @@ import { Buffer } from 'node:buffer';
 const ORDER_TTL_MS = 24 * 60 * 60 * 1000;
 const DEFAULT_CARD_CHECKOUT_URL = 'https://link.infinitepay.io/isaque085/VC1DLTAtUg-LXzP45g8Yz-27,50';
 
-const PRODUCT = { id: 'gta-iv-clip-lucro', name: 'GTA IV CLIP LUCRO', amountCents: 2750 };
+const PRODUCT = { id: 'gta-iv-clip-lucro', name: 'GTA VI CLIP LUCRO', amountCents: 2750 };
 const FINAL_STATUSES = new Set(['paid', 'failed', 'expired']);
 const METHODS = new Set(['PIX', 'CARD']);
 
@@ -270,7 +270,7 @@ async function download(ctx, token) {
     headers: {
       ...SECURITY_HEADERS,
       'Content-Type': 'application/pdf',
-      'Content-Disposition': 'attachment; filename="GTA-IV-CLIP-LUCRO.pdf"',
+      'Content-Disposition': 'attachment; filename="GTA-VI-CLIP-LUCRO.pdf"',
       'Cache-Control': 'private, no-store',
     },
   });

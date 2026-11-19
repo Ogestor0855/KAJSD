@@ -2,7 +2,7 @@
   "name": "gta-iv-clip-lucro",
   "version": "1.0.0",
   "private": true,
-  "description": "Página de vendas e checkout PIX do GTA IV CLIP LUCRO",
+  "description": "Página de vendas e checkout PIX do GTA VI CLIP LUCRO",
   "engines": {
     "node": ">=22"
   },
