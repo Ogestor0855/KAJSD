@@ -102,6 +102,10 @@ a{color:inherit}
 .pay-label svg{width:28px;height:28px;flex:none;color:var(--pc);filter:drop-shadow(0 0 6px var(--pc-glow))}
 .pay-sub{margin:4px 0 0;font-weight:700;font-style:italic;font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase;color:#cfc7ba}
 .pay-sub b{color:var(--pc);font-size:1.35em}
+.pay-sub s{text-decoration-color:var(--pc);text-decoration-thickness:2px}
+.pay-note{margin:-6px 0 14px;font-weight:700;font-size:.92rem;letter-spacing:.03em;text-transform:uppercase;color:#cfc7ba}
+.pay-note b{color:var(--pc)}
+.is-pix .pay-note b{display:inline-block;padding:2px 9px;border-radius:999px;background:var(--pc);color:#06210b;font-style:italic}
 .pay-price{margin:2px 0 14px;font-family:var(--display);font-size:clamp(2.8rem,15cqi,3.7rem);line-height:1;color:#fff;white-space:nowrap;transform:skewX(-6deg);text-shadow:0 4px 18px rgba(0,0,0,.6)}
 .pay-btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:62px;margin-top:auto;padding:14px 16px;border-radius:16px;
   background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.25)),#0e0c0b;border:2px solid var(--pc);color:#fff;
@@ -321,16 +325,18 @@ footer p{margin:4px 0}
         <div class="pay-grid">
           <div class="pay-opt is-card">
             <p class="pay-label"><svg aria-hidden="true"><use href="#i-card"/></svg>Cartão de crédito</p>
-            <p class="pay-sub">Em até <b>12x</b> de</p>
+            <p class="pay-sub">De <s>R$ 97,00</s> por</p>
             <p class="pay-price">R$ 69,90</p>
+            <p class="pay-note">Em até <b>12x</b> no cartão</p>
             <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
               <svg aria-hidden="true"><use href="#i-card"/></svg>Pagar com cartão<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
           <div class="pay-opt is-pix">
             <p class="pay-label"><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix</p>
-            <p class="pay-sub">Apenas</p>
-            <p class="pay-price">R$ 27,50</p>
+            <p class="pay-sub">De <s>R$ 69,90</s> por</p>
+            <p class="pay-price">R$ 34,50</p>
+            <p class="pay-note"><b>50% OFF</b> no Pix</p>
             <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
               <svg aria-hidden="true"><use href="#i-pix"/></svg>Pagar com Pix<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
@@ -371,16 +377,18 @@ footer p{margin:4px 0}
         <div class="pay-grid">
           <div class="pay-opt is-card">
             <p class="pay-label"><svg aria-hidden="true"><use href="#i-card"/></svg>Cartão de crédito</p>
-            <p class="pay-sub">Em até <b>12x</b> de</p>
+            <p class="pay-sub">De <s>R$ 97,00</s> por</p>
             <p class="pay-price">R$ 69,90</p>
+            <p class="pay-note">Em até <b>12x</b> no cartão</p>
             <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
               <svg aria-hidden="true"><use href="#i-card"/></svg>Pagar com cartão<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
           <div class="pay-opt is-pix">
             <p class="pay-label"><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix</p>
-            <p class="pay-sub">Apenas</p>
-            <p class="pay-price">R$ 27,50</p>
+            <p class="pay-sub">De <s>R$ 69,90</s> por</p>
+            <p class="pay-price">R$ 34,50</p>
+            <p class="pay-note"><b>50% OFF</b> no Pix</p>
             <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
               <svg aria-hidden="true"><use href="#i-pix"/></svg>Pagar com Pix<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
@@ -481,16 +489,18 @@ footer p{margin:4px 0}
       <div class="pay-grid">
         <div class="pay-opt is-card">
           <p class="pay-label"><svg aria-hidden="true"><use href="#i-card"/></svg>Cartão de crédito</p>
-          <p class="pay-sub">Em até <b>12x</b> de</p>
+          <p class="pay-sub">De <s>R$ 97,00</s> por</p>
           <p class="pay-price">R$ 69,90</p>
+          <p class="pay-note">Em até <b>12x</b> no cartão</p>
           <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
             <svg aria-hidden="true"><use href="#i-card"/></svg>Pagar com cartão<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
         </div>
         <div class="pay-opt is-pix">
           <p class="pay-label"><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix</p>
-          <p class="pay-sub">Apenas</p>
-          <p class="pay-price">R$ 27,50</p>
+          <p class="pay-sub">De <s>R$ 69,90</s> por</p>
+          <p class="pay-price">R$ 34,50</p>
+          <p class="pay-note"><b>50% OFF</b> no Pix</p>
           <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
             <svg aria-hidden="true"><use href="#i-pix"/></svg>Pagar com Pix<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
