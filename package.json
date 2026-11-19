@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "description": "Página de vendas e checkout PIX do GTA IV CLIP LUCRO",
-  "main": "server.js",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "start": "node --env-file-if-exists=.env server.js",
+    "build": "node scripts/build.js",
+    "start": "npm run build && wrangler pages dev --port 3000",
+    "db:migrate": "wrangler d1 migrations apply DB --remote",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
     "confirmar": "node --env-file-if-exists=.env scripts/confirmar-pagamento.js",
     "hash-senha": "node scripts/hash-senha.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.165.0"
   }
 }

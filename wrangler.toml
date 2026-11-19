@@ -1,0 +1,28 @@
+# Cloudflare Pages: build `npm run build` → dist/ (estáticos) + functions/ (backend).
+name = "gta6"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Configurações não sensíveis. Segredos (PAYMENT_WEBHOOK_SECRET, ADMIN_EMAIL, ADMIN_PASSWORD_HASH)
+# vão como secrets: `npx wrangler pages secret put NOME --project-name gta6`.
+[vars]
+INFINITEPAY_CHECKOUT_URL = "https://link.infinitepay.io/isaque085/VC1DLTAtUg-LXzP45g8Yz-27,50"
+OFFER_START = "2026-11-19T00:00:00-03:00"
+OFFER_END = "2026-11-26T23:59:59-03:00"
+PRODUCT_PDF_KEY = "gta-iv-clip-lucro.pdf"
+
+# Pedidos, sessões do admin e rate limit.
+[[d1_databases]]
+binding = "DB"
+database_name = "gta-iv-clip-lucro"
+database_id = "26bc0f0e-4617-4196-9bfe-8dbf60b6ed0d"
+migrations_dir = "migrations"
+
+# PDF do produto (privado, só sai por /api/download/<token> para pedidos pagos).
+# Ative o R2 no painel da Cloudflare, crie o bucket e descomente:
+#   npx wrangler r2 bucket create gta-iv-clip-lucro
+#   npx wrangler r2 object put gta-iv-clip-lucro/gta-iv-clip-lucro.pdf --file private/gta-iv-clip-lucro.pdf --remote
+# [[r2_buckets]]
+# binding = "PRODUCT_FILES"
+# bucket_name = "gta-iv-clip-lucro"

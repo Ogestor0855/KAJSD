@@ -2,3 +2,6 @@
 data/
 private/*.pdf
 node_modules/
+dist/
+.wrangler/
+.dev.vars
