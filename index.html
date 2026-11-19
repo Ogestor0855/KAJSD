@@ -84,10 +84,8 @@ a{color:inherit}
 .hero-product{grid-area:product;position:relative;isolation:isolate;margin:26px calc(var(--gutter) * -.5) 0;max-width:540px;justify-self:center}
 .hero-product::before{content:"";position:absolute;inset:20% 4% -4%;background:radial-gradient(closest-side,rgba(200,20,28,.14),transparent 75%);z-index:-1}
 .hero-product::after,.offer-product::after{content:"";position:absolute;left:12%;right:12%;bottom:2%;height:16px;border-radius:50%;background:rgba(0,0,0,.7);filter:blur(10px);z-index:-1}
-.product-img{width:100%;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 88%,transparent);-webkit-mask-composite:source-in;
-  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 88%,transparent);mask-composite:intersect;
-  filter:contrast(1.04) drop-shadow(0 24px 30px rgba(0,0,0,.6));transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.product-img{width:100%;height:auto;
+  filter:drop-shadow(0 22px 28px rgba(0,0,0,.6)) drop-shadow(0 0 34px rgba(214,40,110,.16));transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .hero-buy{grid-area:buy;margin-top:26px}
 .mini-price{display:flex;align-items:baseline;justify-content:center;gap:12px;margin:0 0 14px;font-weight:600;color:var(--muted)}
 .mini-price s{text-decoration-color:var(--red);text-decoration-thickness:2px}
@@ -142,8 +140,6 @@ a{color:inherit}
 .offer{position:relative;background:linear-gradient(180deg,var(--bg),var(--char) 30%,var(--char) 70%,var(--bg));padding:56px 0 64px}
 .offer-grid{display:grid;gap:26px;align-items:center}
 .offer-product{position:relative;isolation:isolate;width:min(66%,300px);margin:0 auto}
-.hero-product .product-img{clip-path:polygon(0 13.2%,3.4% 12.4%,13.4% 5%,47% 16.6%,100% 16.6%,100% 100%,0 100%)}
-.offer-product .product-img{clip-path:polygon(0 13.2%,5.8% 12.4%,27.5% 5%,100% 16.6%,100% 100%,0 100%)}
 .price-box{text-align:center}
 .price-old{margin:0;font-size:1.5rem;font-weight:500;color:#cfc7ba}
 .price-old s{text-decoration-color:var(--red);text-decoration-thickness:3px}
@@ -173,9 +169,7 @@ a{color:inherit}
 .rc-brand em{font-style:normal;color:var(--rc-pink)}
 .rc-brand .l2{font-size:.82em}
 .rc-kit{position:relative;width:min(100%,520px)}
-.rc-kit .product-img{filter:drop-shadow(0 24px 30px rgba(20,4,30,.7));
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 24%,#000 90%,transparent);
-  mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 24%,#000 90%,transparent)}
+.rc-kit .product-img{filter:drop-shadow(0 24px 30px rgba(20,4,30,.7)) drop-shadow(0 0 34px rgba(214,40,110,.18))}
 .rc-head{position:relative;margin-top:-6px}
 .rc-head h2{margin:0;font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:-.01em;line-height:1;font-size:clamp(2rem,8.6vw,3.4rem);color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.5)}
 .rc-head .brush{color:var(--rc-orange);width:min(320px,80%);margin-top:10px}
@@ -320,7 +314,7 @@ footer p{margin:4px 0}
       <p class="lead">O método completo para criar clipes de gameplay, com ideias, prompts, roteiros e <mark>um plano prático para produzir conteúdo.</mark></p>
     </div>
     <div class="hero-product">
-      <img class="product-img" src="assets/produto-kit.webp" alt="GTA VI Clip Lucro: caixa do produto, notebook e celular com o material" width="745" height="445" fetchpriority="high" decoding="async">
+      <img class="product-img" src="assets/produto-setup.webp" alt="GTA VI Clip Lucro: TV com clipes, notebook com o gerador de clipes e celular com o app" width="1200" height="721" fetchpriority="high" decoding="async">
     </div>
     <div class="hero-buy">
       <div class="pay">
@@ -329,7 +323,7 @@ footer p{margin:4px 0}
             <p class="pay-label"><svg aria-hidden="true"><use href="#i-card"/></svg>Cartão de crédito</p>
             <p class="pay-sub">Em até <b>12x</b> de</p>
             <p class="pay-price">R$ 69,90</p>
-            <a class="pay-btn" href="https://link.infinitepay.io/gtaiv/VC1D-BzwK1Ps7Lt-69,90" rel="noopener">
+            <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
               <svg aria-hidden="true"><use href="#i-card"/></svg>Pagar com cartão<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
@@ -337,7 +331,7 @@ footer p{margin:4px 0}
             <p class="pay-label"><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix</p>
             <p class="pay-sub">Apenas</p>
             <p class="pay-price">R$ 27,50</p>
-            <a class="pay-btn" href="https://app.pushinpay.com.br/service/pay/a342d955-54d2-4204-82da-312f8728aae2" rel="noopener">
+            <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
               <svg aria-hidden="true"><use href="#i-pix"/></svg>Pagar com Pix<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
@@ -369,7 +363,7 @@ footer p{margin:4px 0}
 <section class="offer grain" id="oferta" aria-labelledby="oferta-t">
   <div class="wrap offer-grid">
     <div class="offer-product reveal">
-      <img class="product-img" src="assets/produto-box.webp" alt="Caixa do produto GTA VI Clip Lucro" width="345" height="445" loading="lazy" decoding="async">
+      <img class="product-img" src="assets/produto-setup-v.webp" alt="GTA VI Clip Lucro: TV, notebook e celular com o material" width="345" height="445" loading="lazy" decoding="async">
     </div>
     <div class="price-box reveal">
       <h2 id="oferta-t" class="sr">Oferta</h2>
@@ -379,7 +373,7 @@ footer p{margin:4px 0}
             <p class="pay-label"><svg aria-hidden="true"><use href="#i-card"/></svg>Cartão de crédito</p>
             <p class="pay-sub">Em até <b>12x</b> de</p>
             <p class="pay-price">R$ 69,90</p>
-            <a class="pay-btn" href="https://link.infinitepay.io/gtaiv/VC1D-BzwK1Ps7Lt-69,90" rel="noopener">
+            <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
               <svg aria-hidden="true"><use href="#i-card"/></svg>Pagar com cartão<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
@@ -387,7 +381,7 @@ footer p{margin:4px 0}
             <p class="pay-label"><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix</p>
             <p class="pay-sub">Apenas</p>
             <p class="pay-price">R$ 27,50</p>
-            <a class="pay-btn" href="https://app.pushinpay.com.br/service/pay/a342d955-54d2-4204-82da-312f8728aae2" rel="noopener">
+            <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
               <svg aria-hidden="true"><use href="#i-pix"/></svg>Pagar com Pix<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
@@ -407,7 +401,7 @@ footer p{margin:4px 0}
     <div class="wrap rc-top-grid">
       <p class="rc-brand" aria-hidden="true"><span>GTA <em>VI</em></span><span class="l2">Clip Lucro</span></p>
       <div class="rc-kit reveal">
-        <img class="product-img" src="assets/produto-kit.webp" alt="Kit GTA VI Clip Lucro: caixa do produto, notebook e celular com o material" width="745" height="445" loading="lazy" decoding="async">
+        <img class="product-img" src="assets/produto-setup.webp" alt="GTA VI Clip Lucro: TV com clipes, notebook com o gerador de clipes e celular com o app" width="1200" height="721" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -489,7 +483,7 @@ footer p{margin:4px 0}
           <p class="pay-label"><svg aria-hidden="true"><use href="#i-card"/></svg>Cartão de crédito</p>
           <p class="pay-sub">Em até <b>12x</b> de</p>
           <p class="pay-price">R$ 69,90</p>
-          <a class="pay-btn" href="https://link.infinitepay.io/gtaiv/VC1D-BzwK1Ps7Lt-69,90" rel="noopener">
+          <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
             <svg aria-hidden="true"><use href="#i-card"/></svg>Pagar com cartão<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
         </div>
@@ -497,7 +491,7 @@ footer p{margin:4px 0}
           <p class="pay-label"><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix</p>
           <p class="pay-sub">Apenas</p>
           <p class="pay-price">R$ 27,50</p>
-          <a class="pay-btn" href="https://app.pushinpay.com.br/service/pay/a342d955-54d2-4204-82da-312f8728aae2" rel="noopener">
+          <a class="pay-btn" href="https://payment.ticto.app/O085A16F0" rel="noopener">
             <svg aria-hidden="true"><use href="#i-pix"/></svg>Pagar com Pix<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
         </div>
