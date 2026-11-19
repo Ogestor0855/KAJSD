@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checkout — GTA IV CLIP LUCRO</title>
+<meta name="description" content="Finalize seu acesso ao GTA IV CLIP LUCRO com pagamento via PIX.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b0a09">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f4f6; --card:#fff; --card-2:#fff; --line:rgba(20,18,16,.09); --line-2:rgba(20,18,16,.18);
+  --ink:#141210; --muted:#5e5852; --field:#fff;
+  --red:#c8141c; --red-d:#8f0c12; --red-txt:#c8141c;
+  --green:#38c94a; --green-d:#1e9a2d; --green-ink:#062b0c;
+  --display:"Anton",Impact,"Arial Narrow",sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --gutter:16px;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1040px;margin:0 auto;padding:0 var(--gutter)}
+.display{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.95;margin:0}
+.slant{display:inline-block;transform:skewX(-7deg)}
+.muted{color:var(--muted)}
+
+/* topo */
+.top{padding:22px 0 18px;border-bottom:1px solid var(--line);text-align:center}
+.top a{text-decoration:none;color:inherit}
+.top .display{font-size:2rem}
+.top .display em{font-style:normal;color:var(--red)}
+.top p{margin:6px 0 0;font-weight:600}
+.secure{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:.85rem;color:var(--muted)}
+.secure svg{width:15px;height:15px}
+
+.layout{display:grid;gap:16px;padding:20px 0 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 1px 2px rgba(20,18,16,.04),0 12px 32px -18px rgba(20,18,16,.18)}
+.card h2{margin:0 0 14px;font-size:1.05rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.step{display:inline-grid;place-items:center;width:24px;height:24px;margin-right:8px;border-radius:50%;background:var(--red);color:#fff;font-size:.8rem;vertical-align:1px}
+
+/* produto */
+.product{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center}
+.product img{width:96px;filter:drop-shadow(0 12px 14px rgba(0,0,0,.28))}
+.product h2{margin:0;font-family:var(--display);font-weight:400;letter-spacing:.01em;font-size:1.5rem;line-height:1;text-transform:uppercase}
+.product p{margin:6px 0 0;font-size:.95rem;color:var(--muted);line-height:1.35}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin:18px 0 0;padding:16px 0 0;list-style:none;border-top:1px solid var(--line);font-size:.93rem}
+.items li{display:flex;gap:8px;align-items:flex-start}
+.tick{flex:none;display:grid;place-items:center;width:18px;height:18px;margin-top:2px;border-radius:4px;background:var(--red);color:#fff}
+.tick svg{width:12px;height:12px}
+.sum{margin-top:18px;padding:16px 18px;border-radius:12px;background:#fff4f4;border:1px solid rgba(200,20,28,.16)}
+.sum p{margin:0}
+.was{font-size:1.55rem;font-weight:700;color:#4a4540;line-height:1.2}
+.now{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-top:6px!important}
+.now span{font-weight:800;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase}
+.now strong{font-family:var(--display);font-weight:400;font-size:3.2rem;line-height:1;color:var(--red)}
+.sum s{text-decoration-color:var(--red);text-decoration-thickness:3px}
+.promo{margin:10px 0 0;font-size:.85rem;color:var(--muted)}
+
+/* valor */
+.amount{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card-2);border-color:var(--line-2)}
+.amount span{font-weight:800;letter-spacing:.06em;font-size:.85rem;text-transform:uppercase;color:var(--muted)}
+.amount strong{font-family:var(--display);font-weight:400;font-size:2.6rem;line-height:1;color:var(--ink)}
+
+/* form */
+.field{display:grid;gap:6px;margin-bottom:14px}
+.field:last-child{margin-bottom:0}
+.field label{font-weight:600;font-size:.95rem}
+.field input{width:100%;height:52px;padding:0 14px;border-radius:10px;border:1px solid var(--line-2);background:var(--field);color:var(--ink);font:500 1rem var(--body);transition:border-color .15s ease,box-shadow .15s ease}
+.field input::placeholder{color:#8a847d}
+.field input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(20,18,16,.08)}
+.field.invalid input{border-color:var(--red-txt)}
+.err{min-height:0;font-size:.85rem;color:var(--red-txt)}
+.err:empty{display:none}
+
+/* pix */
+.pix h2{font-family:var(--display);font-weight:400;font-size:1.9rem;letter-spacing:.01em;margin-bottom:6px}
+.pix .lead{margin:0 0 16px;color:var(--muted)}
+.qr{background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:14px;width:min(100%,300px);margin:0 auto}
+.qr img{width:100%;height:auto;aspect-ratio:714/716}
+.qr-amount{margin:12px 0 0;text-align:center;font-weight:700}
+.or{display:flex;align-items:center;gap:12px;margin:20px 0 12px;color:var(--muted);font-size:.9rem;font-weight:600}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+.code{display:block;width:100%;padding:12px 14px;border:1px dashed var(--line-2);border-radius:10px;background:#f7f7f8;color:var(--ink);font:500 .82rem/1.45 ui-monospace,SFMono-Regular,Consolas,monospace;word-break:break-all;user-select:all;-webkit-user-select:all}
+
+/* botões */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;margin-top:12px;padding:14px 18px;border:0;border-radius:12px;font:800 1rem var(--body);letter-spacing:.03em;text-transform:uppercase;cursor:pointer;transition:transform .15s ease,filter .15s ease,background .2s ease;-webkit-tap-highlight-color:transparent}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.btn:active{transform:none}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn[disabled]{cursor:progress;filter:saturate(.6) brightness(.85);transform:none}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+.btn-ghost.done{border-color:var(--green);color:var(--green)}
+.btn-main{min-height:64px;font-size:1.1rem;background:linear-gradient(180deg,#46d957 0%,var(--green) 45%,var(--green-d) 100%);color:var(--green-ink);box-shadow:0 1px 0 rgba(255,255,255,.45) inset,0 -3px 0 rgba(0,0,0,.18) inset,0 10px 20px -12px rgba(20,18,16,.45)}
+.spin{width:20px;height:20px;border-radius:50%;border:3px solid rgba(6,43,12,.3);border-top-color:var(--green-ink);animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.form-err{margin:12px 0 0;text-align:center;color:var(--red-txt);font-weight:600}
+.form-err:empty{display:none}
+
+/* status */
+.status{display:none;text-align:center}
+.status.show{display:block}
+.status .ring{width:44px;height:44px;margin:4px auto 14px;border-radius:50%;border:4px solid var(--line-2);border-top-color:var(--ink);animation:spin 1s linear infinite}
+.status h3{margin:0;font-size:1.2rem;font-weight:800}
+.status p{margin:8px auto 0;max-width:40ch;color:var(--muted);font-size:.95rem}
+.status .oid{margin-top:12px;font:500 .8rem ui-monospace,Consolas,monospace;color:var(--muted)}
+.status.fail .ring{display:none}
+
+.safe{display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:.9rem;color:var(--muted)}
+.safe li{display:flex;gap:10px;align-items:flex-start}
+.safe svg{flex:none;width:18px;height:18px;margin-top:2px;color:var(--ink)}
+[hidden]{display:none!important}
+.ended p{margin:0;color:var(--muted)}
+
+/* forma de pagamento */
+.methods{display:grid;gap:10px}
+.method{display:flex;align-items:center;gap:14px;width:100%;min-height:68px;padding:14px 16px;border:1px solid var(--line-2);border-radius:12px;background:#fff;color:var(--ink);font:inherit;text-align:left;text-decoration:none;cursor:pointer;transition:border-color .15s ease,background .15s ease}
+.method:hover{border-color:var(--ink)}
+.method:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.method[aria-pressed="true"]{border-color:var(--red);background:#fff4f4}
+.method .dot{flex:none;width:20px;height:20px;border-radius:50%;border:2px solid var(--line-2)}
+.method[aria-pressed="true"] .dot{border:6px solid var(--red)}
+.method svg{flex:none;width:26px;height:26px}
+.method b{display:block;font-weight:800;font-size:1.02rem}
+.method small{display:block;color:var(--muted);font-size:.88rem}
+.method .go{margin-left:auto;width:18px;height:18px;color:var(--muted)}
+.method.loading{cursor:progress}
+.method .spin{border-color:rgba(20,18,16,.2);border-top-color:var(--ink)}
+footer{padding:20px 0 32px;text-align:center;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line)}
+
+/* escassez */
+.scarcity{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 16px;padding:10px 16px;background:linear-gradient(180deg,#d0161f,var(--red-d));color:#fff;text-align:center;text-transform:uppercase;letter-spacing:.03em}
+.sc-1{font-weight:800;font-size:.95rem}
+.sc-2{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.95rem}
+.sc-2 b{display:inline-grid;place-items:center;min-width:40px;height:40px;padding:0 8px;border-radius:8px;background:#fff;color:var(--red);font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1}
+
+@media (min-width:880px){
+  :root{--gutter:24px}
+  .top{text-align:left;display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+  .top .secure{margin:0}
+  .layout{grid-template-columns:.9fr 1.1fr;gap:24px;align-items:start;padding-top:28px}
+  .col-left{position:sticky;top:20px}
+  .product{grid-template-columns:150px 1fr}
+  .product img{width:150px}
+  .product h2{font-size:2rem}
+  .card{padding:24px}
+}
+@media (prefers-reduced-motion:reduce){.spin,.status .ring{animation-duration:3s}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="8.5" width="11" height="12" rx="2"/><path d="M15.5 8.5V5.5a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2"/></g></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pix" viewBox="0 0 24 24"><path d="M12 3.2 20.8 12 12 20.8 3.2 12Z M7.6 7.6l4.4 4.4 4.4-4.4M7.6 16.4l4.4-4.4 4.4 4.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/></g></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path d="M9 6h9v9M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.3 7.5 9.5 4.4-1.2 7.5-4.9 7.5-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!--OFFER:price-->
+<div class="scarcity" role="note">
+  <span class="sc-1">Últimas 20 vagas</span>
+  <span class="sc-2">Restam apenas <b>8</b> vagas</span>
+</div>
+<!--/OFFER:price-->
+<header class="wrap top">
+  <div>
+    <a href="/"><h1 class="display"><span class="slant">GTA <em>IV</em> Clip Lucro</span></h1></a>
+    <p>Finalize seu acesso com segurança</p>
+  </div>
+  <span class="secure"><svg aria-hidden="true"><use href="#i-lock"/></svg>Pagamento seguro</span>
+</header>
+
+<main class="wrap layout">
+  <!-- ESQUERDA: produto -->
+  <div class="col-left">
+    <section class="card" aria-labelledby="prod-t">
+      <div class="product">
+        <img src="/assets/produto-box.webp" alt="Caixa do produto GTA IV Clip Lucro" width="345" height="445">
+        <div>
+          <h2 id="prod-t">GTA IV Clip Lucro</h2>
+          <p>Guia prático para criar clipes, crescer e monetizar seu conteúdo.</p>
+        </div>
+      </div>
+      <ul class="items">
+        <li><span class="tick"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Guia em PDF</li>
+        <li><span class="tick"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Ideias de clipes</li>
+        <li><span class="tick"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Prompts</li>
+        <li><span class="tick"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Roteiros e hooks</li>
+        <li><span class="tick"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Estrutura de conteúdo</li>
+        <li><span class="tick"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Plano de 30 dias</li>
+      </ul>
+      <!--OFFER:price-->
+      <div class="sum">
+        <p class="was">De <s>R$ 69,90</s></p>
+        <p class="now"><span>Por apenas</span><strong>R$ 27,50</strong></p>
+      </div>
+      <p class="promo">Você está garantindo a condição promocional da página.</p>
+      <!--/OFFER:price-->
+    </section>
+  </div>
+
+  <!-- DIREITA: pagamento -->
+  <div class="col-right" style="display:grid;gap:16px">
+    <!--OFFER:pay-->
+    <section class="card amount" aria-label="Valor a pagar">
+      <span>Valor a pagar</span>
+      <strong>R$ 27,50</strong>
+    </section>
+
+    <section class="card" aria-labelledby="dados-t">
+      <h2 id="dados-t"><span class="step">1</span>Seus dados</h2>
+      <form id="form" novalidate>
+        <div class="field">
+          <label for="name">Nome completo</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Seu nome e sobrenome" maxlength="120" required>
+          <span class="err" id="name-err" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="voce@email.com" maxlength="254" required>
+          <span class="err" id="email-err" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="whatsapp">WhatsApp</label>
+          <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel-national" inputmode="numeric" placeholder="(11) 91234-5678" maxlength="16" required>
+          <span class="err" id="whatsapp-err" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" aria-labelledby="metodo-t">
+      <h2 id="metodo-t">Forma de pagamento</h2>
+      <div class="methods">
+        <button class="method" id="m-pix" type="button" aria-pressed="true" aria-controls="pix-box">
+          <span class="dot" aria-hidden="true"></span>
+          <svg aria-hidden="true"><use href="#i-pix"/></svg>
+          <span><b>PIX</b><small>Pagamento instantâneo</small></span>
+        </button>
+        <a class="method" id="m-card" href="/pagar/cartao">
+          <span class="dot" aria-hidden="true"></span>
+          <svg aria-hidden="true"><use href="#i-card"/></svg>
+          <span><b>Cartão de crédito</b><small id="m-card-sub">Pague com cartão de forma segura</small></span>
+          <svg class="go" aria-hidden="true"><use href="#i-out"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="card pix" id="pix-box" aria-labelledby="pix-t">
+      <h2 id="pix-t"><span class="slant">Pague via PIX</span></h2>
+      <p class="lead">Escaneie o QR Code usando o aplicativo do seu banco.</p>
+      <div class="qr">
+        <img src="/assets/pix-qrcode.jpeg" alt="QR Code PIX para pagamento de R$ 27,50" width="714" height="716">
+      </div>
+      <p class="qr-amount">Valor: R$ 27,50</p>
+
+      <p class="or">Ou copie o código PIX</p>
+      <code class="code" id="pix-code">00020126580014br.gov.bcb.pix0136d6ff1f62-da45-491f-ae91-ac71927e5c9a520400005303986540527.505802BR5923Isaque Almeida De Souza6006Brasil62290525202611190446827TRJ2GRA3YQ630469CC</code>
+      <button class="btn btn-ghost" id="copy" type="button"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copiar código PIX</span></button>
+    </section>
+
+    <section class="card" aria-labelledby="conf-t">
+      <h2 id="conf-t"><span class="step">2</span>Confirme seu pedido</h2>
+      <p class="muted" style="margin:0" id="conf-hint">Depois de pagar, toque no botão abaixo para registrar seu pedido.</p>
+      <button class="btn btn-main" id="paid" type="button"><span>Já fiz o pagamento</span></button>
+      <p class="form-err" id="form-err" role="alert"></p>
+
+      <div class="status" id="status" aria-live="polite">
+        <div class="ring" aria-hidden="true"></div>
+        <h3 id="status-t">Estamos verificando seu pagamento...</h3>
+        <p id="status-p">Assim que o pagamento for confirmado, seu acesso é liberado nesta página. Você pode deixar esta página aberta.</p>
+        <p class="oid" id="status-id"></p>
+      </div>
+    </section>
+    <!--/OFFER:pay-->
+
+    <section class="card" aria-label="Informações de segurança">
+      <ul class="safe">
+        <li><svg aria-hidden="true"><use href="#i-lock"/></svg>Pagamento via PIX direto no app do seu banco. Não pedimos dados de cartão ou senhas.</li>
+        <li><svg aria-hidden="true"><use href="#i-bolt"/></svg>Acesso liberado após a confirmação do pagamento.</li>
+        <li><svg aria-hidden="true"><use href="#i-shield"/></svg>Garantia de 30 dias.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer><div class="wrap">GTA IV Clip Lucro — guia digital em PDF.</div></footer>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  if (!$('pix-box')) return; // oferta encerrada: o servidor removeu a área de pagamento
+  var PIX_CODE = $('pix-code').textContent.trim();
+  var STORE_KEY = 'gta_clip_order';
+
+  /* ---------- copiar PIX ---------- */
+  var copyBtn = $('copy'), copyLabel = copyBtn.querySelector('span'), copyTimer;
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok ? Promise.resolve() : Promise.reject();
+  }
+  copyBtn.addEventListener('click', function(){
+    var p = navigator.clipboard && window.isSecureContext ? navigator.clipboard.writeText(PIX_CODE) : fallbackCopy(PIX_CODE);
+    p.catch(function(){ return fallbackCopy(PIX_CODE); }).then(function(){
+      copyBtn.classList.add('done'); copyLabel.textContent = '✓ Código copiado';
+      clearTimeout(copyTimer);
+      copyTimer = setTimeout(function(){ copyBtn.classList.remove('done'); copyLabel.textContent = 'Copiar código PIX'; }, 3000);
+    }, function(){
+      copyLabel.textContent = 'Selecione o código acima e copie';
+      clearTimeout(copyTimer);
+      copyTimer = setTimeout(function(){ copyLabel.textContent = 'Copiar código PIX'; }, 4000);
+    });
+  });
+
+  /* ---------- máscara WhatsApp ---------- */
+  var wa = $('whatsapp');
+  wa.addEventListener('input', function(){
+    var d = wa.value.replace(/\D/g, '');
+    if (d.length > 11 && d.indexOf('55') === 0) d = d.slice(2);
+    d = d.slice(0, 11);
+    var out = d;
+    if (d.length > 2) out = '(' + d.slice(0, 2) + ') ' + d.slice(2);
+    if (d.length > 6) out = '(' + d.slice(0, 2) + ') ' + d.slice(2, d.length === 11 ? 7 : 6) + '-' + d.slice(d.length === 11 ? 7 : 6);
+    wa.value = out;
+  });
+
+  /* ---------- validação ---------- */
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var rules = {
+    name: function(v){ v = v.trim().replace(/\s+/g, ' '); return v.length >= 3 && v.indexOf(' ') > 0 ? '' : 'Informe seu nome completo.'; },
+    email: function(v){ return EMAIL_RE.test(v.trim()) ? '' : 'Informe um e-mail válido.'; },
+    whatsapp: function(v){
+      var d = v.replace(/\D/g, ''), ddd = +d.slice(0, 2);
+      var ok = ((d.length === 11 && d[2] === '9') || d.length === 10) && ddd >= 11;
+      return ok ? '' : 'Informe um WhatsApp válido com DDD.';
+    }
+  };
+  function showError(field, msg){
+    $(field + '-err').textContent = msg;
+    $(field).parentNode.classList.toggle('invalid', !!msg);
+    $(field).setAttribute('aria-invalid', msg ? 'true' : 'false');
+  }
+  function validate(){
+    var first = null;
+    Object.keys(rules).forEach(function(f){
+      var msg = rules[f]($(f).value);
+      showError(f, msg);
+      if (msg && !first) first = f;
+    });
+    if (first) $(first).focus();
+    return !first;
+  }
+  Object.keys(rules).forEach(function(f){
+    $(f).addEventListener('blur', function(){ if ($(f).value) showError(f, rules[f]($(f).value)); });
+    $(f).addEventListener('input', function(){ if ($(f).parentNode.classList.contains('invalid')) showError(f, rules[f]($(f).value)); });
+  });
+
+  /* ---------- pedido + acompanhamento ---------- */
+  var paidBtn = $('paid'), formErr = $('form-err'), statusBox = $('status'), pollTimer;
+
+  function lockForm(){
+    ['name', 'email', 'whatsapp'].forEach(function(f){ $(f).disabled = true; });
+    paidBtn.hidden = true; $('conf-hint').hidden = true;
+  }
+  function showStatus(order){
+    lockForm();
+    statusBox.classList.add('show');
+    $('status-id').textContent = 'Pedido ' + order.orderId.slice(0, 8).toUpperCase();
+    if (order.status === 'failed' || order.status === 'expired') {
+      statusBox.classList.add('fail');
+      $('status-t').textContent = order.status === 'expired' ? 'Este pedido expirou.' : 'Não conseguimos confirmar este pagamento.';
+      $('status-p').innerHTML = 'Se você já pagou, fale com o suporte informando o código do pedido. <a href="/checkout" id="restart" style="color:inherit">Fazer um novo pedido</a>.';
+      $('restart').addEventListener('click', function(){ try { localStorage.removeItem(STORE_KEY); } catch (e) {} });
+      clearTimeout(pollTimer);
+    }
+  }
+  function poll(orderId){
+    fetch('/api/orders/' + encodeURIComponent(orderId), { cache: 'no-store' })
+      .then(function(r){ if (r.status === 404) throw new Error('404'); return r.json(); })
+      .then(function(order){
+        if (order.status === 'paid') { location.href = '/obrigado?pedido=' + encodeURIComponent(order.orderId); return; }
+        showStatus(order);
+        if (order.status === 'pending') pollTimer = setTimeout(function(){ poll(orderId); }, 5000);
+      })
+      .catch(function(err){
+        if (err.message === '404') { try { localStorage.removeItem(STORE_KEY); } catch (e) {} location.reload(); return; }
+        pollTimer = setTimeout(function(){ poll(orderId); }, 8000);
+      });
+  }
+
+  function createOrder(method){
+    return fetch('/api/orders', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: $('name').value, email: $('email').value, whatsapp: $('whatsapp').value, method: method })
+    })
+      .then(function(r){ return r.json().then(function(body){ return { status: r.status, ok: r.ok, body: body }; }); })
+      .then(function(res){
+        if (res.status === 410) { location.reload(); throw new Error(res.body.error); } // oferta encerrou
+        if (!res.ok) {
+          if (res.body.fields) Object.keys(res.body.fields).forEach(function(f){ showError(f, res.body.fields[f]); });
+          throw new Error(res.body.error || 'Não foi possível registrar o pedido.');
+        }
+        return res.body;
+      });
+  }
+
+  paidBtn.addEventListener('click', function(){
+    formErr.textContent = '';
+    if (!validate()) return;
+    paidBtn.disabled = true;
+    paidBtn.innerHTML = '<span class="spin" aria-hidden="true"></span><span>Registrando pedido...</span>';
+    createOrder('PIX')
+      .then(function(order){
+        try { localStorage.setItem(STORE_KEY, order.orderId); } catch (e) {}
+        showStatus(order);
+        pollTimer = setTimeout(function(){ poll(order.orderId); }, 5000);
+      })
+      .catch(function(err){
+        formErr.textContent = err.message && err.message !== 'Failed to fetch' ? err.message : 'Falha de conexão. Tente novamente.';
+        paidBtn.disabled = false;
+        paidBtn.innerHTML = '<span>Já fiz o pagamento</span>';
+      });
+  });
+
+  /* ---------- forma de pagamento ---------- */
+  var mPix = $('m-pix'), mCard = $('m-card'), mCardSub = $('m-card-sub'), mCardIcon = mCard.querySelector('.go');
+  var CARD_SUB = mCardSub.textContent;
+  mPix.addEventListener('click', function(){
+    mPix.setAttribute('aria-pressed', 'true');
+    $('pix-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  mCard.addEventListener('click', function(e){
+    e.preventDefault();
+    if (mCard.classList.contains('loading')) return;
+    // registra o pedido (nome, e-mail, WhatsApp) antes de ir para a InfinitePay
+    if (!validate()) { mCardSub.textContent = 'Preencha seus dados acima para continuar.'; return; }
+    var url = mCard.href;
+    mCard.classList.add('loading');
+    mCardSub.textContent = 'Redirecionando para pagamento seguro...';
+    mCardIcon.outerHTML = '<span class="spin go" aria-hidden="true"></span>';
+    createOrder('CARD')
+      .then(function(){ window.location.href = url; })
+      .catch(function(err){
+        resetCard();
+        mCardSub.textContent = err.message && err.message !== 'Failed to fetch' ? err.message : 'Falha de conexão. Tente novamente.';
+      });
+  });
+  function resetCard(){
+    mCard.classList.remove('loading');
+    mCardSub.textContent = CARD_SUB;
+    var s = mCard.querySelector('.spin');
+    if (s) s.outerHTML = '<svg class="go" aria-hidden="true"><use href="#i-out"/></svg>';
+    mCardIcon = mCard.querySelector('.go');
+  }
+  // ao voltar da InfinitePay pelo botão "voltar", restaura o estado normal
+  window.addEventListener('pageshow', function(e){
+    if (e.persisted && mCard.classList.contains('loading')) resetCard();
+  });
+
+  /* retoma pedido em andamento após recarregar */
+  var saved = null;
+  try { saved = localStorage.getItem(STORE_KEY); } catch (e) {}
+  if (saved && /^[0-9a-f-]{36}$/.test(saved)) poll(saved);
+})();
+</script>
+</body>
+</html>
